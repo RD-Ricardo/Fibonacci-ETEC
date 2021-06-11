@@ -12,18 +12,19 @@ namespace Fibonacci
             Console.WriteLine("------------------------------");
             Console.Write("Digite um número: ");
             int t = Convert.ToInt32(Console.ReadLine());
-            if (t == t)
+            if (t > 2)
             {
                 Console.WriteLine("Série de Fibonacci:");
-                for(int i = 0 ; i <=t ; i++)
+                for (int i = 0; i <= t; i++)
                 {
-                    auxiliar = x + y;
+                    auxiliar = x;
                     x = y;
-                    y = auxiliar;
+                    y = auxiliar + x;
                     Console.WriteLine(auxiliar);
                 }
             }
-            else{
+            else
+            {
                 Console.WriteLine("Digite um número válido.");
             }
         }
